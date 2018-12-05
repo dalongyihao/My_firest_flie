@@ -11,11 +11,15 @@ import  math
 num = input("请输入一个随机数：")
 random_num = random.randrange(100,1000)
 if num.isdigit() and 100<=int(num) <=999:
-    if int(num) > random_num:
+    num = int(num)
+    if num > random_num:
+        bai = num //100
+        shi = (num %100)//10
+        ge = num%10
+        print("这个三位数的个位数是{}十位是{}百位是{}".format(ge,shi,bai))
+    if num  == random_num:
         pass
-    if int(num) == random_num:
-        pass
-    if int(num) < random_num:
-        pass
+    if num  < random_num:
+        print(random_num)
 else:
     print("请输入数字")
