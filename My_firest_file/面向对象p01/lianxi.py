@@ -1,6 +1,12 @@
-# print(ord("z"))
-# # print(chr(97))
-import  random
-num = input("请输入1,2,3一个随机数；")
-rand_num = random.randrange(1,4)
-rand_num = int(rand_num)
+def count():
+    def f(j):
+        def g():
+            return j*j
+        return g
+    fs = []
+    for i in range(1,4):
+        fs.append(f(i))
+    return fs
+
+f1,f2,f3 = count()
+print(f1())
